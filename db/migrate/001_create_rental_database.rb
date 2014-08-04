@@ -18,12 +18,12 @@ class CreateRentalDatabase < ActiveRecord::Migration
 
     create_table :rentals do |t|
       t.integer :customer_id, :car_id, :salesperson_id
-      t.decimal(5,2) :cost
+      t.float :cost
       t.date :date
       t.timestamps
     end
 
-    create_table :maintenance do |t|
+    create_table :maintenances do |t|
       t.integer :vehicle_id
       t.string :service_type
       t.date :date
